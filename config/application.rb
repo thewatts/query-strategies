@@ -44,5 +44,8 @@ module JsbloggerCodemash
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # auto-explain feature
+    config.active_record.auto_explain_threshold_in_seconds = 0.0
   end
 end
