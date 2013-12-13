@@ -7,7 +7,9 @@ class Article < ActiveRecord::Base
   has_many :taggings
   has_many :tags, :through => :taggings
 
-  scope :with_comments, :include =>  {:comments => :approval}
+  def self.with_comments
+    includes(comments: :approval)
+  end
 
   def to_s
     return title
